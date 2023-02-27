@@ -1,10 +1,10 @@
 import type { SocialObjects } from "./types";
 
 export const SITE = {
-  website: "https://codestan.com/",
+  website: "https://serhatcodes.com.com/",
   author: "Serhat Oner",
   desc: "A minimal, responsive and SEO-friendly blog based on Astro blog theme.",
-  title: "Codestan",
+  title: "serhatcodes.com",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 3,
