@@ -11,7 +11,7 @@ tags:
   - functions
   - objects
   - constructor functions
-ogImage: ![this_keyword](https://livecodestream.dev/post/understanding-this-keyword-in-javascript/featured.jpg)
+ogImage: https://livecodestream.dev/post/understanding-this-keyword-in-javascript/featured.jpg
 description: A short explanation of this keyword in JavaScript language.
 ---
 
