@@ -1,9 +1,9 @@
 import type { SocialObjects } from "./types";
 
 export const SITE = {
-  website: "https://serhatcodes.com.com/",
+  website: "https://serhatcodes.com",
   author: "Serhat Oner",
-  desc: "A minimal, responsive and SEO-friendly blog based on Astro blog theme.",
+  desc: "Discover the latest in JavaScript, C#, and other software technologies on serhatcodes.com - the minimal and responsive blog by Serhat Oner. Stay up-to-date with insightful articles and tutorials that explore the ever-evolving world of tech",
   title: "serhatcodes.com",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
