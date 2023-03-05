@@ -1,7 +1,7 @@
 ---
 author: Serhat Oner
 pubDatetime: 2023-03-05
-title: Understanding the Object Destruction in JavaScript
+title: Understanding the This keyword in JavaScript
 postSlug: understanding-this-keyword-in-js
 featured: true
 draft: false
