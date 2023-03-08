@@ -50,7 +50,7 @@ Since we have explained what are Dependency Injection, Inversion of Control and 
 
 In, NET6+ versions of NET Core, `Program.cs` file is the entry point for the application. We don't have `ConfigureServices` and `Configure` methods like previous versions. Instead we implement services after creating our `builder` and manage the pipeline after building our `builder`.
 
-So imagine we have an interface called `IDeveloper`:
+So imagine we have an interface called `IDeveloperService`:
 
 ```csharp
 
@@ -60,7 +60,7 @@ public interface IDeveloperService{
 }
 ```
 
-Then we are going to have a service that will inherit from IDeveloper:
+Then we are going to have a service that will inherit from IDeveloperService:
 
 ```csharp
 public class JavaScriptDeveloper:IDeveloperService{
