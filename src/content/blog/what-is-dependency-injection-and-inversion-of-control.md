@@ -179,7 +179,7 @@ Like that, just changing the Service class, we changed the entire dependency of 
 
 ```csharp
 public void WriteCode(){
-    _developerService.WriteCode(); // will output "I'm writing JavaScript code"
+    _developerService.WriteCode(); // will output "I'm writing CSharp code"
 }
 ```
 
