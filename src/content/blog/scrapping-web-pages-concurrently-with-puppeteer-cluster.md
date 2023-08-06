@@ -149,7 +149,7 @@ await cluster.close();
 ```
 
 The scraping results are stored in the `results` array, and we can log them to the console or process them further according to our requirements.
----
+
 
 ## 5. Conclusion and Summary
 
