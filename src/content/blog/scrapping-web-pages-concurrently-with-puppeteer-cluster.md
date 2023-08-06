@@ -85,9 +85,71 @@ const { Cluster } = require('puppeteer-cluster');
 })();
 ```
 
+
 ## 4. Understanding the Code
 
-In this section, we'll dissect the code snippet provided above and understand how Puppeteer-Cluster enables concurrent web scraping.
+In this section, we'll delve into the code snippet provided above and understand how Puppeteer-Cluster enables concurrent web scraping.
+
+First, we import the `Cluster` class from `puppeteer-cluster`. This class allows us to manage multiple browser instances concurrently.
+
+```javascript
+const { Cluster } = require('puppeteer-cluster');
+```
+
+Next, we define an array of URLs that we want to scrape concurrently:
+
+```javascript
+const urls = ['https://example.com', 'https://samplewebsite.com', 'https://awesomepage.com'];
+```
+
+We also create an empty array called `results` to store the scraping results:
+
+```javascript
+const results = [];
+```
+
+Now comes the exciting part – setting up the Puppeteer-Cluster. We create a new cluster instance with the desired concurrency level. In this example, we're using `CONCURRENCY_BROWSER` to create separate browser instances for each task and `maxConcurrency` set to 5 to run a maximum of 5 browser instances simultaneously. You can adjust this number based on your machine's capacity and performance requirements.
+
+```javascript
+const cluster = await Cluster.launch({
+  concurrency: Cluster.CONCURRENCY_BROWSER,
+  maxConcurrency: 5,
+});
+```
+
+We define a task function that will be executed for each URL in the cluster. Inside this task, we navigate to the URL using `page.goto()`, extract the page title with `page.title()`, and retrieve the meta description using `page.$eval()`. The `data` parameter in the task function represents each URL from the `urls` array.
+
+```javascript
+await cluster.task(async ({ page, data: url }) => {
+  await page.goto(url);
+  const title = await page.title();
+  const metaDescription = await page.$eval('meta[name="description"]', (element) => element.content);
+  results.push({ url, title, metaDescription });
+});
+```
+
+After defining the task function, we queue up each URL in the cluster using `cluster.queue(url)`. Puppeteer-Cluster will efficiently manage the concurrency and distribute the tasks across the available browser instances.
+
+```javascript
+for (const url of urls) {
+  cluster.queue(url);
+}
+```
+
+Next, we wait for the cluster to become idle, which means all tasks are completed and no more tasks are in progress:
+
+```javascript
+await cluster.idle();
+```
+
+Finally, we close the cluster to release the browser instances:
+
+```javascript
+await cluster.close();
+```
+
+The scraping results are stored in the `results` array, and we can log them to the console or process them further according to our requirements.
+---
 
 ## 5. Conclusion and Summary
 
