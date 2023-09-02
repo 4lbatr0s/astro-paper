@@ -1,7 +1,7 @@
 ---
 author: Serhat Oner
 pubDatetime: 2023-09-02
-title: Creating a Navigation Scroll Component in React.js
+title: Creating Navigation Scroll with React Router
 postSlug: creating-navigation-scroll-with-react-router
 featured: true
 draft: false
