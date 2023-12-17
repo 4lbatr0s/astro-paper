@@ -8,7 +8,7 @@
       "@assets/*": ["assets/*"],
       "@config": ["config.ts"],
       "@components/*": ["components/*"],
-      "@content/*": ["content/*"],
+      "@content/*": ["content/blog/*"],
       "@layouts/*": ["layouts/*"],
       "@pages/*": ["pages/*"],
       "@styles/*": ["styles/*"],
