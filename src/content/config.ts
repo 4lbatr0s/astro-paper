@@ -1,4 +1,4 @@
-import { defineCollection } from "astro:content";
+import { defineCollection } from "astro/content/runtime";
 import { blogSchema } from "./_schemas";
 
 const blog = defineCollection({
