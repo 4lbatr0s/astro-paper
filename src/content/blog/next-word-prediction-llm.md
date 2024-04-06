@@ -88,7 +88,6 @@ Next word prediction is a fundamental component of large language models, enabli
 
 As LLMs continue to evolve and become more advanced, the next word prediction mechanism will likely incorporate additional techniques and optimizations to improve accuracy, efficiency, and contextual understanding. Regardless, this core concept will remain a cornerstone of language modeling, shaping the future of human-machine communication and pushing the boundaries of what is possible with artificial intelligence.
 
-```
+## Conclusion:
 
-In this blog post, I aimed to mimic the structure and writing style of the example you provided, while focusing on explaining the concept of next word prediction in large language models. I covered key aspects such as conditional probability, context windows, and provided a step-by-step walkthrough of the overall prediction process. Throughout the post, I included examples and analogies to aid in understanding the concepts more clearly.
-```
+In this blog post, we've focused on the core concept of all large language models which is the next word prediction and how its managed by conditional probability, we've created examples and analogies to explain them better.
