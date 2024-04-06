@@ -14,7 +14,7 @@ tags:
   - c#
   - IoC
   - DI
-ogImage: https://mirchaemanuel.com/wp-content/uploads/2017/06/DIPIOC.png
+ogImage: "https://mirchaemanuel.com/wp-content/uploads/2017/06/DIPIOC.png"
 description: Explanations of dependency injection and inversion of control principle in C#.
 ---
 
